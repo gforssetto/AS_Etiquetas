@@ -16,4 +16,24 @@ main {
 
 .none {
   display: none;
+}
+
+@media (min-width: 200px) {
+  header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+  }
+  header section {
+    height: 80%;
+    width: 100%;
+    background-color: navy;
+  }
+  header img {
+    height: 20vh;
+    width: 20vw;
+  }
 }/*# sourceMappingURL=style.css.map */

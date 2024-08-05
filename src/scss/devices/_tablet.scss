@@ -1,0 +1,70 @@
+@media (min-width:$tabletScreen){
+
+    #hamburguer-menu{
+        display: none;
+    }
+
+    // ------- HEADER START -------
+    // ------- NAV START -------
+
+    nav{
+        display: flex;
+        justify-content: right;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        padding: 2vh 0;
+        // padding-right: 2vw;S
+        background-color: $darkBlue;
+
+        ul{
+            display: flex;
+            list-style-type: none;
+            column-gap: 2.5vw;
+            padding-right: 2vh;
+        }
+        li{
+            height: 100%;
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: .6s;
+            text-shadow: 0 0 0px black;
+            font-size: 24px;
+
+            &:hover{
+                scale: 1.1;
+                letter-spacing: 2px;
+                text-shadow: 0.75vh 0.75vh 3px black;
+            }
+        }
+        .nav-bars{
+            height: 100%;
+            width: 0.25vh;
+            background-color: white;
+        }
+    }
+    
+    // ------- NAV END -------
+
+    header{
+
+        align-items: start;
+        justify-content: start;
+
+        img{
+            height: 30vh;
+            width: 30vh;
+        }
+
+        section{
+            height: 20%;
+        }
+    }
+    // ------- HEADER END -------
+
+}

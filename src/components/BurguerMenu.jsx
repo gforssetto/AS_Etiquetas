@@ -18,7 +18,7 @@ export default function BurguerMenu (){
     }
 
     return <>
-    <div  className={isActive}>
+    <div id="hamburguer-menu" className={isActive}>
         <div className="burguer-menu" onClick={handlerMenuClick}>
             <div className="burguer-bar"></div>
             <div className="burguer-bar"></div>

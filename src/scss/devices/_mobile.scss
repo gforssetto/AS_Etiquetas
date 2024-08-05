@@ -1,5 +1,9 @@
 @media (min-width:$mobileScreen) {
 
+    nav{
+        display: none;
+    }
+
     .test{
         height: 200vh;
         width: 100vw;
@@ -37,10 +41,6 @@
 
         #burguer-nav{
             top: -60vh;
-        }
-
-        .burguer-bar{
-
         }
         // display: none;
         // transform: scale(0);
@@ -132,7 +132,7 @@
         position: absolute;
         z-index: 0;
         section{
-            height: 80%;
+            height: 100%;
             width: 100%;
             background-color: $darkBlue;
         }

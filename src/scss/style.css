@@ -143,53 +143,56 @@ header {
   }
   nav {
     display: flex;
-    justify-content: right;
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    padding: 2vh 0;
-    background-color: #2C2B55;
+    justify-content: flex-end; /* Align the menu to the right */
+    align-items: center; /* Center vertically */
+    width: 60%; /* Take up 60% of the width */
+    background-color: #2C2B55; /* Dark blue background */
+    height: 50%; /* Adjust the height */
+    padding-right: 20px; /* Add some padding to the right */
   }
   nav ul {
     display: flex;
-    list-style-type: none;
-    -moz-column-gap: 2.5vw;
-         column-gap: 2.5vw;
-    padding-right: 2vh;
+    list-style-type: none; /* Remove bullet points */
+    align-items: center;
+    justify-content: space-around; /* Evenly space the items */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
   nav li {
-    height: 100%;
-    display: flex;
+    flex: 1; /* Let each item take up equal space */
+    text-align: center;
   }
   nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: 0.6s;
-    text-shadow: 0 0 0px black;
-    font-size: 24px;
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+    font-weight: 600; /* Bold text */
+    letter-spacing: 1px; /* Slight spacing between letters */
+    font-size: 20px; /* Font size */
+    display: inline-block; /* Make the links inline-block */
+    padding: 10px 20px; /* Add some padding */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
   }
   nav a:hover {
-    scale: 1.1;
-    letter-spacing: 2px;
-    text-shadow: 0.75vh 0.75vh 3px black;
-  }
-  nav .nav-bars {
-    height: 100%;
-    width: 0.25vh;
-    background-color: white;
+    background-color: #444C87; /* Slightly lighter blue background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+    transform: scale(1.1); /* Slightly enlarge the item on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
   }
   header {
     align-items: start;
     justify-content: start;
   }
   header img {
-    height: 30vh;
-    width: 30vh;
+    max-height: 30vh;
+    max-width: 30vh;
   }
   header section {
     height: 20%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
   }
 }
 @media (min-width: 1000px) {

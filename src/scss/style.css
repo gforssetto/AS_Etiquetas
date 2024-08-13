@@ -196,7 +196,15 @@ header {
   }
 }
 @media (min-width: 1000px) {
-  nav {
-    position: static;
+  header {
+    display: flex;
+    background-image: linear-gradient(to bottom, #2C2B55 50%, #E3E7EA);
+  }
+  header section {
+    height: 40%;
+  }
+  header img {
+    max-height: 50vh;
+    max-width: 50vh;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,11 +1,13 @@
-export default function Nav(){
 
-    return <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre Nos</a></li>
-            <li><a href="#produtos">Nossos produtos</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
+export default function Nav() {
+    return (
+        <nav className="main-nav" aria-label="Main Navigation">
+            <ul className="nav-list">
+                <li className="nav-item"><a href="#home" className="nav-link">Home</a></li>
+                <li className="nav-item"><a href="#sobre" className="nav-link">Sobre Nós</a></li>
+                <li className="nav-item"><a href="#produtos" className="nav-link">Nossos Produtos</a></li>
+                <li className="nav-item"><a href="#contato" className="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    );
 }

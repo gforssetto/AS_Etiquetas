@@ -1,21 +1,15 @@
-@media (min-width:$tabletScreen){
 
-    #hamburguer-menu{
+/* Tablet Styles */
+
+@media (min-width: $tabletScreen) {
+
+    /* Hide hamburger menu on tablet */
+    #hamburguer-menu {
         display: none;
     }
 
-    // ------- HEADER START -------
-    // ------- NAV START -------
-
-    nav{
-        // My code
-        // display: flex;
-        // justify-content: right;
-        // width: 60%;
-        // background-color: $darkBlue;
-        // height: 50%;
-
-        // chat code
+    /* Navigation Styles */
+    nav {
         display: flex;
         justify-content: flex-end; /* Align the menu to the right */
         align-items: center; /* Center vertically */
@@ -24,13 +18,7 @@
         height: 50%; /* Adjust the height */
         padding-right: 20px; /* Add some padding to the right */
 
-        ul{
-            // display: flex;
-            // list-style-type: none;
-            // align-items: center;
-            // justify-content: start;
-            // width: 100%;
-
+        ul {
             display: flex;
             list-style-type: none; /* Remove bullet points */
             align-items: center;
@@ -40,26 +28,13 @@
             margin: 0;
             padding: 0;
         }
-        li{
-            // height: auto;
-            // width: 40%;
 
+        li {
             flex: 1; /* Let each item take up equal space */
             text-align: center;
         }
-        a{
-            // text-decoration: none;
-            // color: white;
-            // font-weight: 600;
-            // letter-spacing: 1px;
-            // transition: .6s;
-            // text-shadow: 0 0 0px black;
-            // font-size: 20px;
-            // text-align: center;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;
 
+        a {
             text-decoration: none; /* Remove underline */
             color: white; /* White text */
             font-weight: 600; /* Bold text */
@@ -68,39 +43,37 @@
             display: inline-block; /* Make the links inline-block */
             padding: 10px 20px; /* Add some padding */
             transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-            
-            &:hover{
-                // scale: 1.1;
-                // letter-spacing: 2px;
-                // text-shadow: 0.75vh 0.75vh 3px black;
+        }
 
-                background-color: #444C87; /* Slightly lighter blue background on hover */
-                border-radius: 5px; /* Rounded corners on hover */
-                transform: scale(1.1); /* Slightly enlarge the item on hover */
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
-            }
+        a:hover {
+            background-color: #444C87; /* Slightly lighter blue background on hover */
+            border-radius: 5px; /* Rounded corners on hover */
+            transform: scale(1.1); /* Slightly enlarge the item on hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
         }
     }
-    
-    // ------- NAV END -------
 
-    header{
-
+    /* Header adjustments for tablet */
+    header {
         align-items: start;
         justify-content: start;
-
-        img{
-            max-height: 30vh;
-            max-width: 30vh;
-        }
-
-        section{
-            height: 20%;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-        }
     }
-    // ------- HEADER END -------
 
+    header img {
+        max-height: 30vh;
+        max-width: 30vh;
+    }
+
+    header section {
+        height: 20%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
 }

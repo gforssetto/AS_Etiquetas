@@ -1,27 +1,20 @@
-@media (min-width:$desktopScreen){
-    
-    // ------- HEADER START -------
-    // ------- NAV START -------
-    // nav{
-    //     position: static;
-    // }
 
-    header{
+/* Desktop Styles */
 
+@media (min-width: $desktopScreen) {
+
+    /* Header Styles */
+    header {
+        height: 70%;
         display: flex;
-        // background-image: -moz-linear-gradient($darkBlue,$lightGray);
-        background-image: linear-gradient(to bottom, $darkBlue 50%, $lightGray );
 
-        section{
-            height: 40%;
+        section {
+            height: 70%;
         }
 
-        img{
-
+        img {
             max-height: 50vh;
             max-width: 50vh;
         }
     }
-    // ------- HEADER END -------
-    // ------- NAV END -------
 }

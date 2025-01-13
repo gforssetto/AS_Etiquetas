@@ -1,12 +1,25 @@
+
+/* Variables */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+/* Screen Sizes */
 $mobileScreen   : 200px;
 $tabletScreen   : 600px;
 $desktopScreen  : 1000px;
 
+/* Font Family */
 $fontFamily     : "Open Sans", sans-serif;
 
+/* Colors */
 $darkBlue       : #2C2B55;
+$lightBlue      : #4c4b94;
 $lightGray      : #E3E7EA;
 $white          : rgb(202, 202, 202);
 
+/* Additional Variables */
+$primary-color      : #2C2B55;
+$secondary-color    : #444C87;
+$text-color         : #ffffff;
+$padding            : 20px;
+$font-stack         : 'Arial', sans-serif;

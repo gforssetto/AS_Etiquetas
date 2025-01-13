@@ -1,4 +1,10 @@
+/* Variables */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+/* Screen Sizes */
+/* Font Family */
+/* Colors */
+/* Additional Variables */
+/* Normalize Styles */
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +29,9 @@ header {
   display: none;
 }
 
+/* Mobile Styles */
 @media (min-width: 200px) {
+  /* Hide the navigation by default */
   nav {
     display: none;
   }
@@ -31,6 +39,7 @@ header {
     height: 200vh;
     width: 100%;
   }
+  /* Header and Navigation Toggle Styles */
   .displayTrue #burguer-nav {
     top: 0vh;
   }
@@ -137,10 +146,13 @@ header {
     z-index: 1;
   }
 }
+/* Tablet Styles */
 @media (min-width: 600px) {
+  /* Hide hamburger menu on tablet */
   #hamburguer-menu {
     display: none;
   }
+  /* Navigation Styles */
   nav {
     display: flex;
     justify-content: flex-end; /* Align the menu to the right */
@@ -180,6 +192,7 @@ header {
     transform: scale(1.1); /* Slightly enlarge the item on hover */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
   }
+  /* Header adjustments for tablet */
   header {
     align-items: start;
     justify-content: start;
@@ -194,14 +207,21 @@ header {
     justify-content: end;
     align-items: center;
   }
-}
-@media (min-width: 1000px) {
-  header {
+  main {
     display: flex;
-    background-image: linear-gradient(to bottom, #2C2B55 50%, #E3E7EA);
+    flex-direction: row;
+    position: relative;
+  }
+}
+/* Desktop Styles */
+@media (min-width: 1000px) {
+  /* Header Styles */
+  header {
+    height: 70%;
+    display: flex;
   }
   header section {
-    height: 40%;
+    height: 70%;
   }
   header img {
     max-height: 50vh;

@@ -39,21 +39,27 @@ body {
     width: 100vw;
   }
   header section {
-    height: 60%;
+    height: 50%;
     background-color: #E3E7EA;
     width: 100%;
   }
   header nav {
-    height: 40%;
-    background-color: #2C2B55;
+    height: 50%;
     width: 100%;
-    background-image: url(/public/imgs/as_logo.png);
-    background-position: center;
+    background-image: url(/public/imgs/MobileLogo.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: top;
   }
 }
 /* Tablet Styles */
+@media (min-width: 600px) {
+  header nav {
+    background-image: url(/public/imgs/TabletLogo.png);
+    background-size: contain;
+    background-position: top;
+  }
+}
 /* Desktop Styles */
 @media (min-width: 1000px) {
   /* Header Styles */

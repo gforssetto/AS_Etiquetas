@@ -3,5 +3,11 @@
 
 @media (min-width: $tabletScreen) {
 
-   
+   header{
+    nav{
+        background-image: url(/public/imgs/TabletLogo.png);
+        background-size: contain;
+        background-position: top;
+    }
+   }
 }

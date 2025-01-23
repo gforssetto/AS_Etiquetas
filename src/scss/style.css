@@ -35,32 +35,62 @@ body {
 /* Mobile Styles */
 @media (min-width: 200px) {
   header {
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
-  }
-  header section {
-    height: 50%;
-    background-color: #E3E7EA;
-    width: 100%;
-  }
-  header nav {
-    height: 50%;
-    width: 100%;
+    justify-content: start;
     background-image: url(/public/imgs/MobileLogo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
   }
+  header .nav {
+    visibility: hidden;
+    display: none;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  header .nav ul {
+    display: flex;
+  }
 }
 /* Tablet Styles */
 @media (min-width: 600px) {
-  header nav {
+  header {
     background-image: url(/public/imgs/TabletLogo.png);
     background-size: contain;
     background-position: top;
+  }
+  header .nav {
+    display: flex;
+    visibility: initial;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10vh;
+  }
+  header .nav ul {
+    display: flex;
+    width: 90%;
+    justify-content: end;
+    gap: 4vh;
+  }
+  header .nav li {
+    display: flex;
+  }
+  header .nav a {
+    color: #E3E7EA;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 2vh;
   }
 }
 /* Desktop Styles */
 @media (min-width: 1000px) {
   /* Header Styles */
+  header {
+    background-image: url(/public/imgs/DesktopLogo.png);
+  }
 }/*# sourceMappingURL=style.css.map */

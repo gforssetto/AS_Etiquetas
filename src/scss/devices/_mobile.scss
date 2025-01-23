@@ -4,20 +4,28 @@
 @media (min-width: $mobileScreen) {
 
     header {
-        height: 100vh;
+        height: 50vh;
         width: 100vw;
-        section{
+        justify-content: start;
+        background-image: url(/public/imgs/MobileLogo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+
+        .nav{
+            visibility: hidden;
+            display: none;
             height: 50%;
-            background-color: $lightGray;
             width: 100%;
+            display: flex;
+            align-items: center;
+
+            ul{
+                display: flex;
+            }
         }
-        nav{
-            height: 50%;
-            width: 100%;
-            background-image: url(/public/imgs/MobileLogo.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: top;
+
+        .navMobile{
         }
     }
     

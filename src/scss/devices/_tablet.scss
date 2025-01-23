@@ -4,10 +4,32 @@
 @media (min-width: $tabletScreen) {
 
    header{
-    nav{
-        background-image: url(/public/imgs/TabletLogo.png);
-        background-size: contain;
-        background-position: top;
-    }
+       background-image: url(/public/imgs/TabletLogo.png);
+       background-size: contain;
+       background-position: top;
+       .nav{
+        display: flex;
+        visibility: initial;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-bottom: 10vh;
+            ul{
+                display: flex;
+                width: 90%;
+                justify-content: end;
+                gap: 4vh;
+            }
+            li{
+                display: flex;
+            }
+            a{
+                color: $lightGray;
+                text-decoration: none;
+                letter-spacing: 1px;
+                font-size: 2vh;
+            }
+       }
    }
 }

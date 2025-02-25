@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variables */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 /* Screen Sizes */
@@ -35,47 +36,236 @@ body {
 /* Mobile Styles */
 @media (min-width: 200px) {
   header {
-    height: 50vh;
-    width: 100vw;
-    justify-content: start;
-    background-image: url(/public/imgs/MobileLogo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
+    min-height: 30vh; /* Garante um tamanho mínimo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* Botão do menu hambúrguer */
+    /* Novo menu mobile escondido por padrão */
+    /* Quando o menu for ativado, ele desliza para dentro */
+    /* Estilos do menu mobile */
   }
   header .nav {
-    visibility: hidden;
-    display: none;
-    height: 50%;
+    height: 50vh;
     width: 100%;
     display: flex;
     align-items: center;
+    background-color: #2C2B55; /* Cor de fundo */
   }
   header .nav ul {
+    display: none;
+    z-index: 99;
+  }
+  header .header-logo {
+    max-width: 90%; /* Garante que a imagem nunca ultrapasse a tela */
+    height: auto; /* Mantém a proporção da imagem */
+    -o-object-fit: contain;
+       object-fit: contain; /* Evita cortes */
+    position: absolute;
+    padding-top: 25vh;
+  }
+  header .menu-btn {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 100;
+    color: #E3E7EA;
+    text-shadow: 0px 0px 5px black;
+  }
+  header .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fica fora da tela */
+    width: 60%;
+    height: 100vh;
+    background: rgba(44, 43, 85, 0.95);
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 100;
+    box-shadow: 0 0 15px black;
+  }
+  header .mobile-menu.ativo {
+    right: 0;
+  }
+  header .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  header .mobile-menu ul li {
+    margin: 20px 0;
+  }
+  header .mobile-menu ul a {
+    color: white;
+    text-decoration: none;
+  }
+  header .mobile-menu ul a {
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  header .mobile-menu ul a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #E3E7EA;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+  header .mobile-menu ul a:hover {
+    color: #f8b400;
+  }
+  header .mobile-menu ul a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25vh;
+  }
+  /* Estilização da seção Sobre Nós */
+  /* Mobile Styles (até 600px) */
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5vh 10vw;
+    color: #2C2B55;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  /* Container para alinhar texto e imagem */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  /* Seção Sobre Nós - Mobile */
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5vh 10vw;
+    text-align: center;
+    color: #2C2B55;
+    background-color: #f9f9f9;
+  }
+  /* Container para alinhar o conteúdo */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  /* Estilo do conteúdo */
+  .about-content {
+    max-width: 90%;
+  }
+  /* Título */
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  /* Parágrafo */
+  .about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  /* Imagem */
+  .about-image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+  }
+  /* Seção Serviços - Mobile */
+  .services, .testimonials, .contact {
+    padding: 5vh 10vw;
+    text-align: center;
+  }
+  .services-container, .testimonials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .service-card, .testimonial-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .service-card img {
+    width: 100%;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .contact-form button {
+    padding: 1rem;
+    background: #2C2B55;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Rodapé */
+  .footer {
+    text-align: center;
+    padding: 3vh;
+    background: #2C2B55;
+    color: white;
+  }
+  .footer ul {
+    list-style: none;
+    padding: 0;
   }
 }
 /* Tablet Styles */
 @media (min-width: 600px) {
   header {
-    background-image: url(/public/imgs/TabletLogo.png);
-    background-size: contain;
-    background-position: top;
+    align-items: start;
   }
   header .nav {
-    display: flex;
-    visibility: initial;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-bottom: 10vh;
+    height: 20vh;
   }
   header .nav ul {
     display: flex;
-    width: 90%;
+    width: 95%;
     justify-content: end;
-    gap: 4vh;
+    gap: 2vh;
   }
   header .nav li {
     display: flex;
@@ -84,13 +274,137 @@ body {
     color: #E3E7EA;
     text-decoration: none;
     letter-spacing: 1px;
-    font-size: 2vh;
+    font-size: 1.7rem;
+    text-shadow: 0 0 15px black;
+  }
+  header .nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  header .nav ul li {
+    margin: 20px 0;
+  }
+  header .nav ul a {
+    color: white;
+    text-decoration: none;
+  }
+  header .nav ul a {
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  header .nav ul a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #E3E7EA;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+  header .nav ul a:hover {
+    color: #f8b400;
+  }
+  header .nav ul a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  header .header-logo {
+    max-width: 50%;
+    padding-top: 10vh;
+  }
+  header .menu-btn {
+    display: none;
+  }
+  /* Tablet Styles (mínimo 600px) */
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .about-content {
+    max-width: 50%;
+  }
+  .about h2 {
+    font-size: 2.5rem;
+  }
+  .about p {
+    font-size: 1.2rem;
+  }
+  .about-image img {
+    max-width: 350px;
+  }
+  .services-container, .testimonials-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .service-card, .testimonial-card {
+    max-width: 45%;
+  }
+  .contact-form {
+    max-width: 70%;
+    margin: auto;
   }
 }
 /* Desktop Styles */
 @media (min-width: 1000px) {
   /* Header Styles */
-  header {
-    background-image: url(/public/imgs/DesktopLogo.png);
+  header .nav {
+    height: 30vh;
+  }
+  header .nav ul {
+    -moz-column-gap: 4vh;
+         column-gap: 4vh;
+  }
+  header .nav a {
+    font-size: 5vh;
+  }
+  header .header-logo {
+    max-width: 15%;
+    padding-top: 10vh;
+  }
+  .about {
+    padding: 10vh 10vw;
+  }
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  /* Fundo do conteúdo no desktop */
+  .about-content {
+    max-width: 45%;
+    padding: 3rem;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .about h2 {
+    font-size: 3rem;
+  }
+  .about p {
+    font-size: 1.4rem;
+  }
+  .about-image img {
+    max-width: 400px;
+  }
+  .services-container, .testimonials-container {
+    justify-content: space-between;
+  }
+  .service-card, .testimonial-card {
+    max-width: 30%;
+  }
+  .contact-form {
+    max-width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -5,8 +5,71 @@
 
     /* Header Styles */
     header {
-        background-image: url(/public/imgs/DesktopLogo.png);
-        nav{
+        
+        
+        .nav{
+            height: 30vh;
+
+            ul{
+                column-gap: 4vh;
+            }
+
+            a{
+                font-size: 5vh;
+            }
+
+        }
+
+        .header-logo{
+            max-width: 15%;
+            padding-top: 10vh;
+    
         }
     }
+
+    .about {
+      padding: 10vh 10vw;
+    }
+  
+    .about-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+    }
+  
+    /* Fundo do conteúdo no desktop */
+    .about-content {
+      max-width: 45%;
+      padding: 3rem;
+      border-radius: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .about h2 {
+      font-size: 3rem;
+    }
+  
+    .about p {
+      font-size: 1.4rem;
+    }
+  
+    .about-image img {
+      max-width: 400px;
+    }
+
+    .services-container, .testimonials-container {
+      justify-content: space-between;
+    }
+  
+    .service-card, .testimonial-card {
+      max-width: 30%;
+    }
+  
+    .contact-form {
+      max-width: 50%;
+    }
+    
+  
 }

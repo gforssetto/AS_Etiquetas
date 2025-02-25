@@ -3,33 +3,128 @@
 
 @media (min-width: $tabletScreen) {
 
-   header{
-       background-image: url(/public/imgs/TabletLogo.png);
-       background-size: contain;
-       background-position: top;
-       .nav{
-        display: flex;
-        visibility: initial;
-        height: 50%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding-bottom: 10vh;
+    header{
+    align-items: start;
+        .nav{
+
+            height: 20vh;
+
             ul{
                 display: flex;
-                width: 90%;
+                width: 95%;
                 justify-content: end;
-                gap: 4vh;
+                gap: 2vh;
             }
+            
             li{
                 display: flex;
             }
+
             a{
                 color: $lightGray;
                 text-decoration: none;
                 letter-spacing: 1px;
-                font-size: 2vh;
+                font-size: 1.7rem;
+                text-shadow: 0 0 15px black;
             }
-       }
-   }
+
+             ul {
+                list-style: none;
+                padding: 0;
+            }
+            
+            ul li {
+                margin: 20px 0;
+            }
+            
+            ul a {
+                color: white;
+                text-decoration: none;
+            }
+    
+            ul a {
+                position: relative;
+                color: white;
+                font-size: 1.5rem;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+            }
+              
+            ul a::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background-color: $lightGray;
+                left: 50%;
+                bottom: -5px;
+                transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+            }
+              
+            ul a:hover {
+                color: $yellow;
+              }
+              
+            ul a:hover::after {
+                width: 100%;
+                left: 0;
+              }
+        }
+
+        .header-logo{
+        max-width: 50%;
+        padding-top: 10vh;
+
+        }
+
+        .menu-btn{
+            display: none;
+        }
+    }
+
+    /* Tablet Styles (mínimo 600px) */
+    .about-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .about-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+  
+    .about-content {
+      max-width: 50%;
+    }
+  
+    .about h2 {
+      font-size: 2.5rem;
+    }
+  
+    .about p {
+      font-size: 1.2rem;
+    }
+  
+    .about-image img {
+      max-width: 350px;
+    }
+    
+    .services-container, .testimonials-container {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .service-card, .testimonial-card {
+      max-width: 45%;
+    }
+  
+    .contact-form {
+      max-width: 70%;
+      margin: auto;
+    }
+    
+  
 }

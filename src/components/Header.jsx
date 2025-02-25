@@ -7,15 +7,15 @@ export default function Header(){
     const [menuAberto, setMenuAberto] = useState(false)
 
     return (
-        <header className="header">
+        <header className="header" id='home'>
             <button className={`menu-btn ${menuAberto ? 'ativo' : ''}`} onClick={() => setMenuAberto(!menuAberto)}>
             ☰
             </button>
             <div className={`mobile-menu ${menuAberto ? 'ativo' : ''}`}>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                    <li><a href="">Produtos</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
                 </ul>
             </div>
             <Nav menuAberto={menuAberto}/>

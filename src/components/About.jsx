@@ -8,9 +8,6 @@ export default function About() {
                     Desde 2010, a A.S. Etiquetas oferece soluções em etiquetas adesivas, com atendimento personalizado e entrega rápida. Trabalhamos com produtos de alta qualidade para diversos setores.
                     </p>
                 </div>
-                <div className="about-image">
-                    <img src="/imgs/place_holder_600x400.png" alt="Sobre Nós" />
-                </div>
             </div>
         </section>
     );

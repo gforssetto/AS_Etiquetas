@@ -124,7 +124,44 @@
     main{
         display: flex;
         flex-direction: column;
-        padding-top: 25vh;
+        align-items: center;
+        padding: 15vh 0;
+    }
+
+.button-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        padding: 1rem 2rem;
+        background-color: $white;
+        border: 2px solid $darkBlue;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease-in-out;
+        margin-bottom: 2rem;
+        transition: .4s;
+        
+        a{
+          letter-spacing: 1px;
+          text-decoration: none;
+          font-weight: 600;
+          color: black;
+          text-shadow: 0 0 0 black;
+          transition: .4s;
+        }
+        
+
+        &:hover  {
+            background-color: $yellow; /* Cor de destaque ao passar o mouse */
+            color: black; /* Cor do texto ao passar o mouse */
+        }
+        &:hover a{
+          letter-spacing: 3px;
+          color: $white;
+          text-shadow: 0 0 5px black;
+        }
     }
 
     /* Estilização da seção Sobre Nós */
@@ -145,7 +182,6 @@
   /* Container para alinhar texto e imagem */
   .about-container {
     display: flex;
-
     width: 100%;
   }
   
@@ -217,7 +253,22 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.img-wrapper {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; /* opcional */
+}
+
 .service-card img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.contact{
   width: 100%;
 }
 

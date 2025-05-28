@@ -2,9 +2,10 @@ import './scss/style.css';
 import Header from './components/Header';
 import About from './components/About';
 import Services from './components/Services';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ButtonMain from './components/Button';
 
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
     <div className="App">
       <Header/>
       <main>
+        <ButtonMain />
         <About/>
         <Services />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
       </main>
       <Footer />

@@ -134,7 +134,40 @@ body {
   main {
     display: flex;
     flex-direction: column;
-    padding-top: 25vh;
+    align-items: center;
+    padding: 15vh 0;
+  }
+  .button-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 1rem 2rem;
+    background-color: rgb(202, 202, 202);
+    border: 2px solid #2C2B55;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    transition: 0.4s;
+  }
+  .button-main a {
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    text-shadow: 0 0 0 black;
+    transition: 0.4s;
+  }
+  .button-main:hover {
+    background-color: #f8b400; /* Cor de destaque ao passar o mouse */
+    color: black; /* Cor do texto ao passar o mouse */
+  }
+  .button-main:hover a {
+    letter-spacing: 3px;
+    color: rgb(202, 202, 202);
+    text-shadow: 0 0 5px black;
   }
   /* Estilização da seção Sobre Nós */
   /* Mobile Styles (até 600px) */
@@ -153,10 +186,6 @@ body {
   /* Container para alinhar texto e imagem */
   .about-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
     width: 100%;
   }
   /* Seção Sobre Nós - Mobile */
@@ -219,7 +248,21 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
+  .img-wrapper {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* opcional */
+  }
   .service-card img {
+    max-width: 100%;
+    max-height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .contact {
     width: 100%;
   }
   .contact-form {

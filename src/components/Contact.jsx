@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-        <section className="contact">
+        <section className="contact" id="contact">
             <h2>Entre em Contato</h2>
             <form
                 className="contact-form"

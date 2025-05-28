@@ -6,6 +6,7 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ButtonMain from './components/Button';
+import Links from './components/Links';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Services />
         {/* <Testimonials /> */}
         <Contact />
+        <Links />
       </main>
       <Footer />
     </div>

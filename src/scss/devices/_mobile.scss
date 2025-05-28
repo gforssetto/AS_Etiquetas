@@ -125,7 +125,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 25vh 0;
+        padding-top: 25vh;
     }
 
 .button-main {
@@ -291,6 +291,56 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.contact-links{
+  
+  padding-bottom: 5vh;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+  }
+  p{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2C2B55;
+  }
+
+  a {
+    color: #2C2B55;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+    text-shadow: 0 0 0 black;
+  
+
+    &:hover {
+      color: $yellow;
+      text-decoration: underline;
+      scale: 1.05;
+      text-shadow: 0 0 5px black;
+    }
+  }
+
+  i.icon {
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
 }
 
 /* Rodapé */

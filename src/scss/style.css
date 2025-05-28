@@ -135,7 +135,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25vh 0;
+    padding-top: 25vh;
   }
   .button-main {
     display: flex;
@@ -282,6 +282,47 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
+  .contact-links {
+    padding-bottom: 5vh;
+  }
+  .contact-links ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contact-links li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+  }
+  .contact-links p {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2C2B55;
+  }
+  .contact-links a {
+    color: #2C2B55;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+    text-shadow: 0 0 0 black;
+  }
+  .contact-links a:hover {
+    color: #f8b400;
+    text-decoration: underline;
+    scale: 1.05;
+    text-shadow: 0 0 5px black;
+  }
+  .contact-links i.icon {
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
   /* Rodapé */
   .footer {
     text-align: center;
@@ -399,7 +440,7 @@ body {
 /* Desktop Styles */
 @media (min-width: 1000px) {
   main {
-    padding: 15vh 0;
+    padding-top: 15vh;
   }
   /* Header Styles */
   header .nav {

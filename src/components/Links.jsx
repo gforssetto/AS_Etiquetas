@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faMobileAlt, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 
 
@@ -31,6 +32,11 @@ export default function Links() {
           <FontAwesomeIcon icon={faPhone} />
           <p>Telefone:</p>
           <a href="tel:+5511947863363">+55 11 94786-3363</a>
+        </li>
+        <li>
+            <FontAwesomeIcon icon={faLocationDot} />
+            <p>Endereço:</p>
+            <span>Av. Cásper Líbero, 260 – Osasco/SP</span>
         </li>
       </ul>
     </section>

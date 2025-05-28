@@ -12,7 +12,7 @@ export default function Services() {
                 </div>
                 <div className="service-card">
                     <div className="img-wrapper">
-                        <img src="/imgs/lacre2.png" alt="Serviço 2" />
+                        <img src="/imgs/Lacre2.png" alt="Serviço 2" />
                     </div>
                     
                     <h3>Etiquetas de lacre para Entrega</h3>

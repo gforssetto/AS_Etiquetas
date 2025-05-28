@@ -24,8 +24,8 @@ export default function Links() {
         <li>
           <FontAwesomeIcon icon={faInstagram} />
           <p>Instagram:</p>
-          <a href="https://instagram.com/as_etiquetas" target="_blank" rel="noreferrer">
-            @as_etiquetas
+          <a href="https://www.instagram.com/as_etiquetasadesivas/" target="_blank" rel="noreferrer">
+            @as_etiquetasadesivas
           </a>
         </li>
         <li>
